@@ -11,8 +11,10 @@ const QuizQuestion = ({ className }) => {
           <p className="quiz-subtitle">Escolha uma das respostas para vários mattis suspendisse. Fringilla sit amet velit non tincidunt</p>
         </div>
         <div className="quiz-box">
-          <div className="quiz-home-button"></div>
-          <div className="quiz-question-content">
+          <div className="quiz-home-button">
+            <i className="fa fa-home"></i>
+          </div>
+          <div className="quiz-box-content">
             <h2 className="quiz-question-title">1. Pergunta nonononoonon</h2>
             <div className="row">
               <div className="col-md-6">

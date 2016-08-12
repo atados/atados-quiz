@@ -13,8 +13,8 @@ const QuizPresentation = ({ onStartClick }) => {
         <div className="quiz-presentation-start">
           <div className="quiz-box quiz-presentation-box">
             <h1 className="quiz-title">Quizz do volutário</h1>
-            <p className="quiz-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur atque, quo obcaecati iusto illum delectus ipsum molestias soluta placeat ullam excepturi rerum accusantium, optio, ratione dignissimos esse nostrum quidem tempore!</p>
-            <button onClick={ onStartClick } className="btn btn-lg">Clique aqui para começar</button>
+            <p className="quiz-subtitle">Lorem ipsum dolor sit amet, ac eleifend massa justo elementum, integer orci sapien. Ultricies vel non, sit vel vitae. Socieosqu semper mauris dolor, integer rutrum in vestibulum massa.</p>
+            <button onClick={ onStartClick } className="btn quiz-button">Clique aqui para começar</button>
           </div>
         </div>
       </div>

@@ -2,7 +2,9 @@ import React from 'react'
 import QuizPresentation from '../components/QuizPresentation'
 import QuizQuestion from '../components/QuizQuestion'
 import QuizToolbar from '../components/QuizToolbar'
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
+import QuizResult from '../components/QuizResult'
+import QuizResultProjects from '../components/QuizResultProjects';
 
 const Quiz = ({ step, dispatch, nextStep }) => {
   const questions = [ 1 ]
@@ -12,9 +14,11 @@ const Quiz = ({ step, dispatch, nextStep }) => {
       {
         step === -1
         ? <QuizPresentation onStartClick={ nextStep } />
-        : step >= questions.length
-          ? "Finished"
-          : <QuizQuestion question={ questions[step] }/>
+        : step === questions.length
+          ? <QuizResult />
+            : step > questions.length
+            ? <QuizResultProjects />
+            : <QuizQuestion question={ questions[step] }/>
       }
     </div>
   );
