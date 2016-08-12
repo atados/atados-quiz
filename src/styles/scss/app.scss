@@ -1,0 +1,13 @@
+@import 'variables';
+
+@import 'quiz';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: $text-color;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 16px;
+}

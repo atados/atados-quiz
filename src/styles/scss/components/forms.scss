@@ -1,0 +1,17 @@
+.input {
+  outline: none;
+  border-radius: 4px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  color: $text-color;
+  transition: border-color .1s;
+
+  &:hover {
+    border-color: #aaa;
+  }
+
+  &:focus {
+    border-color: $form-focus-highlight;
+  }
+}
