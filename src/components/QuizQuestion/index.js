@@ -2,7 +2,7 @@ import React from 'react'
 import QuizAnswer from '../QuizAnswer'
 import Image from '../QuizAnswer/image.jpg';
 
-const QuizQuestion = ({ className }) => {
+const QuizQuestion = ({ onAnswerClick }) => {
   return (
     <div className="quiz-question">
       <div className="container">
@@ -18,33 +18,18 @@ const QuizQuestion = ({ className }) => {
             <h2 className="quiz-question-title">1. Pergunta nonononoonon</h2>
             <div className="row">
               <div className="col-md-6">
-                <QuizAnswer image={Image}/>
+                <QuizAnswer label="A" onClick={ onAnswerClick } image={Image}/>
               </div>
               <div className="col-md-6">
-                <div className="quiz-answer">
-                  <div className="quiz-label">B</div>
-                  <div className="quiz-answer-content">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quia nihil dolore amet</span>
-                  </div>
-                </div>
+                <QuizAnswer label="B" onClick={ onAnswerClick }/>
               </div>
             </div>
             <div className="row">
               <div className="col-md-6">
-                <div className="quiz-answer">
-                  <div className="quiz-label">C</div>
-                  <div className="quiz-answer-content">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quia nihil dolore amet</span>
-                  </div>
-                </div>
+                <QuizAnswer label="C" onClick={ onAnswerClick }/>
               </div>
               <div className="col-md-6">
-                <div className="quiz-answer">
-                  <div className="quiz-label">D</div>
-                  <div className="quiz-answer-content">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quia nihil dolore amet</span>
-                  </div>
-                </div>
+                <QuizAnswer label="D" onClick={ onAnswerClick }/>
               </div>
             </div>
           </div>

@@ -15,10 +15,10 @@ const Quiz = ({ step, dispatch, nextStep }) => {
         step === -1
         ? <QuizPresentation onStartClick={ nextStep } />
         : step === questions.length
-          ? <QuizResult />
+          ? <QuizResult onShowVacanciesClick={ nextStep } />
             : step > questions.length
             ? <QuizResultProjects />
-            : <QuizQuestion question={ questions[step] }/>
+            : <QuizQuestion onAnswerClick={ nextStep } question={ questions[step] }/>
       }
     </div>
   );

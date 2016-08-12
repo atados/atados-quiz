@@ -2,7 +2,7 @@ import React from 'react'
 import QuizResultItem from '../QuizResultItem'
 import DogImage from '../QuizResultItem/dog-image.jpg';
 
-const QuizResult = ({ className }) => {
+const QuizResult = ({ onShowVacanciesClick }) => {
   return (
     <div className="quiz-result">
       <div className="container">
@@ -29,7 +29,7 @@ const QuizResult = ({ className }) => {
                 <QuizResultItem name="Proteção animal" image={ DogImage } />
               </div>
             </div>
-            <button className="btn quiz-button">Vagas disponíveis</button>
+            <button onClick={ onShowVacanciesClick } className="btn quiz-button">Vagas disponíveis</button>
           </div>
         </div>
       </div>
