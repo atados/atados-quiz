@@ -1,8 +1,35 @@
 import React from 'react'
-import QuizAnswer from '../QuizAnswer'
-import Image from '../QuizAnswer/image.jpg';
+import QuizAlternative from '../QuizAlternative'
 
-const QuizQuestion = ({ onAnswerClick }) => {
+function renderAlternatives(alternatives, onAlternativeClick) {
+  const arr = []
+  const rendered = []
+  for( let label in alternatives) {
+    if (alternatives.hasOwnProperty(label)) {
+      arr.push(
+        <div className="col-md-6">
+          <QuizAlternative
+            {...alternatives[label]}
+            label={label}
+            onClick={() => onAlternativeClick(label, alternatives[label]) }
+          />
+        </div>
+      )
+    }
+  }
+
+  for( let i = 0; i <= arr.length; i += 2) {
+    rendered.push(
+      <div className="row" key={i}>
+        { arr[i] }
+        { arr[i + 1] ? arr[i + 1] : null }
+      </div>
+    )
+  }
+  return rendered;
+}
+
+const QuizQuestion = ({ title, alternatives, onAlternativeClick }) => {
   return (
     <div className="quiz-question">
       <div className="container">
@@ -15,23 +42,8 @@ const QuizQuestion = ({ onAnswerClick }) => {
             <i className="fa fa-home"></i>
           </div>
           <div className="quiz-box-content">
-            <h2 className="quiz-question-title">1. Pergunta nonononoonon</h2>
-            <div className="row">
-              <div className="col-md-6">
-                <QuizAnswer label="A" onClick={ onAnswerClick } image={Image}/>
-              </div>
-              <div className="col-md-6">
-                <QuizAnswer label="B" onClick={ onAnswerClick }/>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-6">
-                <QuizAnswer label="C" onClick={ onAnswerClick }/>
-              </div>
-              <div className="col-md-6">
-                <QuizAnswer label="D" onClick={ onAnswerClick }/>
-              </div>
-            </div>
+            <h2 className="quiz-question-title">{ title }</h2>
+            { renderAlternatives(alternatives, onAlternativeClick) }
           </div>
         </div>
       </div>

@@ -1,11 +1,11 @@
 import React from 'react'
 import Logo from './logo.png';
 
-const QuizToolbar = () => {
+const QuizToolbar = ({ onLogoClick  }) => {
   return (
     <div className="quiz-toolbar">
       <div className="quiz-statusbar"></div>
-      <img src={Logo} alt=""/>
+      <img onClick={ onLogoClick } src={Logo} alt=""/>
     </div>
   );
 };

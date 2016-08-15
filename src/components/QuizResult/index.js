@@ -1,8 +1,30 @@
 import React from 'react'
 import QuizResultItem from '../QuizResultItem'
-import DogImage from '../QuizResultItem/dog-image.jpg';
 
-const QuizResult = ({ onShowVacanciesClick }) => {
+function renderItems(items) {
+  if (!items) return [];
+  const rendered = []
+  const arr = items.map( item => (
+    <div className="col-md-6">
+      <QuizResultItem
+        {...item}
+      />
+    </div>
+  ))
+
+
+  for( let i = 0; i <= arr.length; i += 2) {
+    rendered.push(
+      <div className="row" key={i}>
+        { arr[i] }
+        { arr[i + 1] ? arr[i + 1] : null }
+      </div>
+    )
+  }
+  return rendered;
+}
+
+const QuizResult = ({ causes, skills, onShowVacanciesClick }) => {
   return (
     <div className="quiz-result">
       <div className="container">
@@ -12,23 +34,9 @@ const QuizResult = ({ onShowVacanciesClick }) => {
         <div className="quiz-box">
           <div className="quiz-box-content">
             <h2 className="quiz-result-section-title">Suas <span className="quiz-highlight">causas</span> são:</h2>
-            <div className="row">
-              <div className="col-md-6">
-                <QuizResultItem name="Proteção animal" image={ DogImage } />
-              </div>
-              <div className="col-md-6">
-                <QuizResultItem name="Proteção animal" image={ DogImage } />
-              </div>
-            </div>
+            { renderItems(causes) }
             <h2 className="quiz-result-section-title">Suas <span className="quiz-highlight">habilidades</span> são:</h2>
-            <div className="row">
-              <div className="col-md-6">
-                <QuizResultItem name="Proteção animal" image={ DogImage } />
-              </div>
-              <div className="col-md-6">
-                <QuizResultItem name="Proteção animal" image={ DogImage } />
-              </div>
-            </div>
+            { renderItems(skills) }
             <button onClick={ onShowVacanciesClick } className="btn quiz-button">Vagas disponíveis</button>
           </div>
         </div>
