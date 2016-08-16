@@ -1,4 +1,4 @@
-import Image from './components/QuizAlternative/image.jpg'
+import Image from '../components/QuizAlternative/image.jpg'
 
 export const causes =  [
   {

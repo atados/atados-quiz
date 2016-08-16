@@ -1,7 +1,7 @@
-import questions, { firstQuestion } from '../../questions'
+import questions, { firstQuestion } from '../../content/questions'
 import { QUIZ_RESET, STEP_PRESENTATION, SET_STEP, SET_CURRENT_QUESTION, ANSWER_QUESTION, SET_RESULTS } from '../../actions/quizActions'
-import causes from '../../causes'
-import skills from '../../skills'
+import causes from '../../content/causes'
+import skills from '../../content/skills'
 
 const initialState = {
   currentStep: STEP_PRESENTATION,

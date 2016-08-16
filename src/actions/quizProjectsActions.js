@@ -2,6 +2,7 @@ import { arrayToObject } from '../utils'
 import reqwest from 'reqwest'
 export const REQUEST_PROJECTS = 'REQUEST_PROJECTS'
 export const RECEIVE_PROJECTS = 'RECEIVE_PROJECTS'
+export const RECEIVE_PROJECT = 'RECEIVE_PROJECT'
 
 function requestProjects() {
   return {

@@ -14,6 +14,22 @@ class QuizResultProjects extends React.Component {
   componentWillReceiveProps(nextProps) {
   }
 
+  get content() {
+    const { projects, isFetching } = this.props;
+    if (isFetching) {
+      return "Loading"
+    }
+
+    console.log(projects)
+
+    return projects.map(project =>
+      <QuizResultProject
+        key={project.id}
+        {...project}
+      />
+    )
+  }
+
   render() {
     return (
       <div className="quiz-projects">
@@ -23,10 +39,7 @@ class QuizResultProjects extends React.Component {
           </div>
           <div className="quiz-box">
             <div className="quiz-box-content">
-              <QuizResultProject />
-              <QuizResultProject />
-              <QuizResultProject />
-              <QuizResultProject />
+              { this.content }
             </div>
           </div>
         </div>

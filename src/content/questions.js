@@ -1,5 +1,5 @@
-import Image from './components/QuizAlternative/image.jpg'
-import DogImage from './components/QuizResultItem/dog-image.jpg'
+import Image from '../components/QuizAlternative/image.jpg'
+import DogImage from '../components/QuizResultItem/dog-image.jpg'
 import {
   CAUSE_PROFESSIONAL_CAPACITATION,
   CAUSE_FIGHTING_POVERTY,

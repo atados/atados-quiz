@@ -43,4 +43,5 @@ export function objectToArray(obj) {
       arr.push(obj[key])
     }
   }
+  return arr
 }

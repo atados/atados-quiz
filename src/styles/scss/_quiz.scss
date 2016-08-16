@@ -325,7 +325,7 @@ $color-2: #1e9ad8;
       height: 46px;
       border-radius: 4px;
       float: left;
-      background: #eee;
+      background-color: #eee;
       border: 1px solid #ccc;
       margin-left: -62px;
     }
@@ -365,6 +365,7 @@ $color-2: #1e9ad8;
     text-align: center;
 
     .quiz-project {
+      vertical-align: top;
       margin: 25px 25px 0 0;
       display: inline-block;
     }

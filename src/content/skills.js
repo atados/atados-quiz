@@ -1,4 +1,4 @@
-import DogImage from './components/QuizResultItem/dog-image.jpg'
+import DogImage from '../components/QuizResultItem/dog-image.jpg'
 export const skills = [
   {
     id: "1",
