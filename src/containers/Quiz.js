@@ -70,11 +70,13 @@ class Quiz extends React.Component {
 }
 
 export default connect(
-  state => {
+  (state, ownProps) => {
     const props = {
       step: state.quiz.currentStep,
       answers: state.quiz.answers
     }
+
+    document.body.scrollTop = 0;
 
     if (state.quiz.results) {
       props["results"] = {

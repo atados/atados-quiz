@@ -2,6 +2,10 @@ $toolbar-height: 110px;
 $color: #E27F2E;
 $color-2: #1e9ad8;
 
+body {
+  background: #F7FAFA;
+}
+
 .quiz {
   background: #F7FAFA;
 
@@ -31,12 +35,18 @@ $color-2: #1e9ad8;
     background-repeat: no-repeat;
   }
 
+  .quiz-presentation-content {
+    max-width: 540px;
+  }
+
   .quiz-presentation-col {
+    height: 100%;
     padding: 40px;
-    max-width: 580px;
+    overflow-y: auto;
 
     @media (max-width: 992px) {
       margin: 0 auto;
+      height: auto;
     }
   }
 
@@ -52,6 +62,8 @@ $color-2: #1e9ad8;
       top: 0;
       bottom: 0;
       margin: auto;
+      max-width: 100%;
+      white-space: normal;
     }
   }
 
@@ -95,17 +107,17 @@ $color-2: #1e9ad8;
 
   .quiz-button {
     border-radius: 0;
-    height: 60px;
     background: $color;
     color: #fff;
     margin-top: 20px;
     font-size: 24px;
     font-weight: 500;
+    min-height: 60px;
+    word-wrap: break-word;
+    white-space: normal;
   }
 
   .quiz-container {
-    background: #F7FAFA;
-
     @media (min-width: 992px) {
       position: fixed;
       top: $toolbar-height;
@@ -113,15 +125,14 @@ $color-2: #1e9ad8;
       right: 0;
       bottom: 0;
     }
+  }
 
-    > .col-md-6 {
-      height: 100%;
-    }
+  .quiz-presentation-image {
+    height: 100%;
 
-    > .col-md-6.quiz-image {
-      @media (max-width: 992px) {
-        min-height: 300px;
-      }
+    @media (max-width: 992px) {
+      min-height: 300px;
+      height: auto;
     }
   }
 
