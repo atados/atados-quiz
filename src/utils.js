@@ -35,3 +35,12 @@ export function arrayToObject(arr, key) {
   }
   return obj
 }
+
+export function objectToArray(obj) {
+  let arr = []
+  for ( let key in obj ) {
+    if (obj.hasOwnProperty(key)) {
+      arr.push(obj[key])
+    }
+  }
+}
