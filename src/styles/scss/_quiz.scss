@@ -291,7 +291,7 @@ body {
     display: block;
     background: #fff;
     width: 250px;
-    min-height: 220px;
+    height: 240px;
     border: 1px solid #D9D9DE;
     color: #222;
     text-align: left;
@@ -348,6 +348,9 @@ body {
       .quiz-project-owner-name {
         font-weight: 600;
         margin: 0 0 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
 
       .quiz-project-address {

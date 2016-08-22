@@ -2,7 +2,8 @@ import React from 'react'
 import QuizResultProject from '../QuizResultProject'
 import { connect } from 'react-redux'
 import { objectToArray } from '../../utils'
-import { fetchProjectsIfNeeded } from '../../actions/quizProjectsActions';
+import { fetchProjectsIfNeeded } from '../../actions/quizProjectsActions'
+import loadingSpin from '../../assets/loading-spin.svg';
 
 class QuizResultProjects extends React.Component {
 
@@ -16,11 +17,14 @@ class QuizResultProjects extends React.Component {
 
   get content() {
     const { projects, isFetching } = this.props;
+
     if (isFetching) {
-      return "Loading"
+      return <img src={loadingSpin} alt="Loading" />
     }
 
-    console.log(projects)
+    if (!projects || !projects.length) {
+      return <h3>Nenhuma vaga encontrada</h3>
+    }
 
     return projects.map(project =>
       <QuizResultProject
