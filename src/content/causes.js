@@ -69,19 +69,19 @@ export const causes =  [
 ]
 
 // Exporting the ids by name
-export const CAUSE_PROFESSIONAL_CAPACITATION = "1"
-export const CAUSE_FIGHTING_POVERTY = "2"
-export const CAUSE_CONSCIOUS_CONSUMPTION = "3"
-export const CAUSE_YOUNG_PEOPLE = "4"
-export const CAUSE_CULTURE = "5"
-export const CAUSE_RIGHTS_DEFENSE = "6"
-export const CAUSE_EDUCATION = "7"
-export const CAUSE_ELDERLY = "8"
-export const CAUSE_ENVIRONMENT = "9"
-export const CAUSE_CIVIC_PARTICIPATION = "10"
-export const CAUSE_ANIMAL_PROTECTION = "11"
-export const CAUSE_HEALTH = "12"
-export const CAUSE_DISABLED_PEOPLE = "13"
+export const PROFESSIONAL_CAPACITATION = "1"
+export const FIGHTING_POVERTY = "2"
+export const CONSCIOUS_CONSUMPTION = "3"
+export const YOUNG_PEOPLE = "4"
+export const CULTURE = "5"
+export const RIGHTS_DEFENSE = "6"
+export const EDUCATION = "7"
+export const ELDERLY = "8"
+export const ENVIRONMENT = "9"
+export const CIVIC_PARTICIPATION = "10"
+export const ANIMAL_PROTECTION = "11"
+export const HEALTH = "12"
+export const DISABLED_PEOPLE = "13"
 
 
 const causes_obj = {}

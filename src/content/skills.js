@@ -63,19 +63,19 @@ export const skills = [
 ]
 
 // Exporting the ids by name
-export const SKILL_ART = "1"
-export const SKILL_COMMUNICATION = "2"
-export const SKILL_DANCE_MUSIC = "3"
-export const SKILL_LAW = "4"
-export const SKILL_EDUCATION = "5"
-export const SKILL_SPORTS = "6"
-export const SKILL_GASTRONOMY = "7"
-export const SKILL_ELDERLY = "8"
-export const SKILL_LANGUAGES = "9"
-export const SKILL_IT = "10"
-export const SKILL_HEALTH = "11"
-export const SKILL_PSYCHOLOGY = "12"
-export const SKILL_OTHERS = "13"
+export const ART = "1"
+export const COMMUNICATION = "2"
+export const DANCE_MUSIC = "3"
+export const LAW = "4"
+export const EDUCATION = "5"
+export const SPORTS = "6"
+export const GASTRONOMY = "7"
+export const MANAGEMENT = "8"
+export const LANGUAGES = "9"
+export const IT = "10"
+export const HEALTH = "11"
+export const PSYCHOLOGY = "12"
+export const OTHERS = "13"
 
 const skills_obj = {}
 

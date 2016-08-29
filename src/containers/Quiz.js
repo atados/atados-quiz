@@ -18,11 +18,11 @@ class Quiz extends React.Component {
   handleQuestionAnswer(question, label) {
     const answer = question.alternatives[label]
     this.props.answerQuestion(question.id, answer)
-    if (answer.finish) {
+    if (answer.finish || question.finish) {
       this.calculateResults()
       this.props.setStep(STEP_RESULT)
     } else {
-      this.props.setCurrentQuestion(answer.next)
+      this.props.setCurrentQuestion(answer.next || question.next)
     }
   }
 
