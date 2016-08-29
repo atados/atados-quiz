@@ -1,17 +1,30 @@
 import React from 'react'
 import QuizAlternative from '../QuizAlternative'
+import { containAll } from '../../utils'
 
-function renderAlternatives(alternatives, onAlternativeClick) {
+function renderAlternatives(alternatives, onAlternativeClick, results) {
   const arr = []
   const rendered = []
   for( let label in alternatives) {
     if (alternatives.hasOwnProperty(label)) {
+
+      let alternative = alternatives[label]
+      let _label = label
+
+      if (
+        (alternative.causes && results.causes.length && containAll(results.causes, alternative.causes)) ||
+        (alternative.skills && results.skills.length && containAll(results.skills, alternative.skills)) ) {
+        _label = alternative.otherwise
+        alternative = alternatives[_label]
+        console.log(label)
+      }
+
       arr.push(
         <div className="col-md-6">
           <QuizAlternative
-            {...alternatives[label]}
+            {...alternative}
             label={label}
-            onClick={() => onAlternativeClick(label, alternatives[label]) }
+            onClick={() => onAlternativeClick(_label, alternative) }
           />
         </div>
       )
@@ -29,7 +42,7 @@ function renderAlternatives(alternatives, onAlternativeClick) {
   return rendered;
 }
 
-const QuizQuestion = ({ title, alternatives, onAlternativeClick }) => {
+const QuizQuestion = ({ title, alternatives, onAlternativeClick, results }) => {
   return (
     <div className="quiz-question">
       <div className="container">
@@ -43,7 +56,7 @@ const QuizQuestion = ({ title, alternatives, onAlternativeClick }) => {
           </div>
           <div className="quiz-box-content">
             <h2 className="quiz-question-title">{ title }</h2>
-            { renderAlternatives(alternatives, onAlternativeClick) }
+            { renderAlternatives(alternatives, onAlternativeClick, results) }
           </div>
         </div>
       </div>

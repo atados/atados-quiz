@@ -45,6 +45,7 @@ class Quiz extends React.Component {
         const question = this.props.question
         return <QuizQuestion
           {...question}
+          results={results}
           onAlternativeClick={ (label) => this.handleQuestionAnswer(question, label) } />
 
       case STEP_RESULT:
@@ -78,11 +79,13 @@ export default connect(
 
     document.body.scrollTop = 0;
 
-    if (state.quiz.results) {
+    if (state.quiz.results && props.step !== STEP_QUESTION) {
       props["results"] = {
         "causes": state.quiz.results.causes.map(id => state.quiz.causes[id]),
         "skills": state.quiz.results.skills.map(id => state.quiz.skills[id]),
       }
+    } else {
+      props["results"] = state.quiz.results
     }
 
     if (props.step === STEP_QUESTION) {

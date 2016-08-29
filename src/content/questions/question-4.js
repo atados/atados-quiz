@@ -1,4 +1,5 @@
 import * as s from '../skills'
+import Image from '../../components/QuizAlternative/image.jpg'
 export default {
   "text_4": {
     title: "Quais dessas ideias mais te lembra seu potencial?",
@@ -28,22 +29,26 @@ export default {
     alternatives: {
       "A": {
         image: Image,
-        skills: [ s.DANCE_MUSIC ]
+        skills: [ s.DANCE_MUSIC ],
+        otherwise: "B"
       },
 
       "B": {
         image: Image,
-        skills: [ s.SPORTS ]
+        skills: [ s.SPORTS ],
+        otherwise: "C"
       },
 
       "C": {
         image: Image,
-        skills: [ s.ART ]
+        skills: [ s.ART ],
+        otherwise: "A"
       },
 
       "D": {
         image: Image,
-        skills: [ s.ART ]
+        skills: [ s.ART ],
+        otherwise: "B"
       }
     }
   },
@@ -54,22 +59,26 @@ export default {
     alternatives: {
       "A": {
         image: Image,
-        skills: [ s.COMMUNICATION ]
+        skills: [ s.COMMUNICATION ],
+        otherwise: "B"
       },
 
       "B": {
         image: Image,
-        skills: [ s.EDUCATION ]
+        skills: [ s.EDUCATION ],
+        otherwise: "A"
       },
 
       "C": {
         image: Image,
-        skills: [ s.IT ]
+        skills: [ s.IT ],
+        otherwise: "D"
       },
 
       "D": {
         image: Image,
-        skills: [ s.LANGUAGES ]
+        skills: [ s.LANGUAGES ],
+        otherwise: "A"
       }
     }
   },
@@ -81,12 +90,14 @@ export default {
     alternatives: {
       "A": {
         image: Image,
-        skills: [ s.LAW ]
+        skills: [ s.LAW ],
+        otherwise: "B"
       },
 
       "B": {
         image: Image,
-        skills: [ s.MANAGEMENT ]
+        skills: [ s.MANAGEMENT ],
+        otherwise: "D"
       },
 
       "C": {
@@ -96,7 +107,8 @@ export default {
 
       "D": {
         image: Image,
-        skills: [ s.GASTRONOMY ]
+        skills: [ s.GASTRONOMY ],
+        otherwise: "B"
       }
     }
   },
@@ -107,22 +119,26 @@ export default {
     alternatives: {
       "A": {
         image: Image,
-        skills: [ s.HEALTH ]
+        skills: [ s.HEALTH ],
+        otherwise: "B"
       },
 
       "B": {
         image: Image,
-        skills: [ s.PSYCHOLOGY ]
+        skills: [ s.PSYCHOLOGY ],
+        otherwise: "A"
       },
 
       "C": {
         image: Image,
-        skills: [ s.HEALTH ]
+        skills: [ s.HEALTH ],
+        otherwise: "D"
       },
 
       "D": {
         image: Image,
-        skills: [ s.PSYCHOLOGY ]
+        skills: [ s.PSYCHOLOGY ],
+        otherwise: "C"
       }
     }
   }

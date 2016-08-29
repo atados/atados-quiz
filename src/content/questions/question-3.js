@@ -1,4 +1,6 @@
 import * as s from '../skills'
+import Image from '../../components/QuizAlternative/image.jpg'
+
 export default {
   "text_3": {
     title: "Qual desses é seu propósito?",

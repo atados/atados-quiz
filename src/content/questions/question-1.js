@@ -1,4 +1,6 @@
 import * as c from '../causes'
+import Image from '../../components/QuizAlternative/image.jpg'
+
 export default {
   "text_1": {
     title: "Qual dessas frases mais te representa?",
@@ -91,12 +93,12 @@ export default {
 
       "C": {
         image: Image,
-        causes: [ c.DISABLED_PEOPLE ],
+        causes: [ c.DISABLED_PEOPLE ]
       },
 
       "D": {
         image: Image,
-        causes: [ c.DISABLED_PEOPLE ],
+        causes: [ c.DISABLED_PEOPLE ]
       }
     }
   },

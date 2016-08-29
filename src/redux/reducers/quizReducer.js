@@ -1,5 +1,5 @@
 import questions, { firstQuestion } from '../../content/questions'
-import { QUIZ_RESET, STEP_PRESENTATION, SET_STEP, SET_CURRENT_QUESTION, ANSWER_QUESTION, SET_RESULTS } from '../../actions/quizActions'
+import { QUIZ_RESET, STEP_PRESENTATION, SET_STEP, SET_CURRENT_QUESTION, ANSWER_QUESTION } from '../../actions/quizActions'
 import causes from '../../content/causes'
 import skills from '../../content/skills'
 
@@ -10,6 +10,10 @@ const initialState = {
   answers: {
     causes: {},
     skills: {}
+  },
+  results: {
+    causes: [],
+    skills: []
   },
   causes: causes,
   skills: skills
@@ -32,6 +36,7 @@ const quiz = (state = initialState, action) => {
       }
     case ANSWER_QUESTION:
       const answers = { ...state.answers }
+      const results = { ...state.results }
       const answer = action.answer
 
       if (answer.causes) {
@@ -39,6 +44,11 @@ const quiz = (state = initialState, action) => {
           answers.causes[cause_id] = answers.causes[cause_id]
             ? answers.causes[cause_id] + 1
             : 1
+
+          console.log(cause_id)
+
+          if (results.causes.indexOf(cause_id) === -1)
+            results.causes.push(cause_id)
         })
       }
 
@@ -47,23 +57,27 @@ const quiz = (state = initialState, action) => {
           answers.skills[skill_id] = answers.skills[skill_id]
             ? answers.skills[skill_id] + 1
             : 1
+
+          if (results.skills.indexOf(skill_id) === -1)
+            results.skills.push(skill_id)
         })
       }
 
       return {
         ...state,
-        answers
+        answers,
+        results
       }
     case SET_CURRENT_QUESTION:
       return {
         ...state,
         currentQuestion: action.question_key,
       }
-    case SET_RESULTS:
-      return {
-        ...state,
-        results: action.results
-      }
+    //case SET_RESULTS:
+      // return {
+      //   ...state,
+      //   results: action.results
+      // }
     default:
       return state
   }

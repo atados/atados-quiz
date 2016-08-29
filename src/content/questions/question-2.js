@@ -1,4 +1,6 @@
 import * as c from '../causes'
+import Image from '../../components/QuizAlternative/image.jpg'
+
 export default {
   "text_2": {
     title: "Qual dessas frases mais te representa?",
@@ -28,22 +30,26 @@ export default {
     alternatives: {
       "A": {
         image: Image,
-        causes: [ c.FIGHTING_POVERTY ]
+        causes: [ c.FIGHTING_POVERTY ],
+        otherwise: "B"
       },
 
       "B": {
         image: Image,
-        causes: [ c.RIGHTS_DEFENSE ]
+        causes: [ c.RIGHTS_DEFENSE ],
+        otherwise: "A"
       },
 
       "C": {
         image: Image,
-        causes: [ c.CIVIC_PARTICIPATION ]
+        causes: [ c.CIVIC_PARTICIPATION ],
+        otherwise: "B"
       },
 
       "D": {
         image: Image,
-        causes: [ c.PROFESSIONAL_CAPACITATION ]
+        causes: [ c.PROFESSIONAL_CAPACITATION ],
+        otherwise: "C"
       }
     }
   },
@@ -55,21 +61,25 @@ export default {
       "A": {
         image: Image,
         causes: [ c.CULTURE ],
+        otherwise: "C"
       },
 
       "B": {
         image: Image,
         causes: [ c.YOUNG_PEOPLE ],
+        otherwise: "A",
       },
 
       "C": {
         image: Image,
         causes: [ c.EDUCATION ],
+        otherwise: "B",
       },
 
       "D": {
         image: Image,
         causes: [ c.YOUNG_PEOPLE ],
+        otherwise: "A",
       }
     }
   },
@@ -82,21 +92,25 @@ export default {
       "A": {
         image: Image,
         causes: [ c.ELDERLY ],
+        otherwise: "C",
       },
 
       "B": {
         image: Image,
         causes: [ c.HEALTH ],
+        otherwise: "D",
       },
 
       "C": {
         image: Image,
         causes: [ c.DISABLED_PEOPLE ],
+        otherwise: "A"
       },
 
       "D": {
         image: Image,
         causes: [ c.DISABLED_PEOPLE ],
+        otherwise: "B",
       }
     }
   },
@@ -108,21 +122,25 @@ export default {
       "A": {
         image: Image,
         causes: [ c.ENVIRONMENT ],
+        otherwise: "B",
       },
 
       "B": {
         image: Image,
         causes: [ c.ANIMAL_PROTECTION ],
+        otherwise: "A",
       },
 
       "C": {
         image: Image,
         causes: [ c.CONSCIOUS_CONSUMPTION ],
+        otherwise: "A",
       },
 
       "D": {
         image: Image,
         causes: [ c.ANIMAL_PROTECTION ],
+        otherwise: "A",
       }
     }
   }

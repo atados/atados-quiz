@@ -45,3 +45,11 @@ export function objectToArray(obj) {
   }
   return arr
 }
+
+export function containAll(arr1, arr2) {
+  for (let i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) === -1)
+      return false
+  }
+  return true
+}
