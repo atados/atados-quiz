@@ -1,8 +1,27 @@
 import * as s from '../skills'
-import Image from '../../components/QuizAlternative/image.jpg'
+import A_image_art from '../../assets/img/8A/arte2.jpg'
+import A_image_handicraft from '../../assets/img/8A/artesanato2.jpg'
+import A_image_music from '../../assets/img/8A/musica2.jpg'
+import A_image_sports from '../../assets/img/8A/esporte2.jpg'
+
+import B_image_communication from '../../assets/img/8B/comunicacao2.jpg'
+import B_image_education from '../../assets/img/8B/educacao2.jpg'
+import B_image_eletronics from '../../assets/img/8B/eletronica2.jpg'
+import B_image_languages from '../../assets/img/8B/idiomas2.jpg'
+
+import C_image_law from '../../assets/img/8C/direitos.jpg'
+import C_image_gastronomy from '../../assets/img/8C/gastronomia2.jpg'
+import C_image_management from '../../assets/img/8C/gestao2.jpg'
+import C_image_management2 from '../../assets/img/8C/gestao4.jpg'
+
+import D_image_someone_happy from '../../assets/img/8D/alguemfelizhosp.jpg'
+import D_image_talk_in_comunity from '../../assets/img/8D/conversaentrecomunid.jpg'
+import D_image_kid_in_hospital from '../../assets/img/8D/criancanohosp2.jpg'
+import D_image_rh from '../../assets/img/8D/rh2.jpg'
+
 export default {
   "text_4": {
-    title: "Quais dessas ideias mais te lembra seu potencial?",
+    title: "Entre essas ideias, qual melhor define seu potencial? ",
     alternatives:  {
       "A": {
         text: "O movimento das artes nos leva para outra dimensão sem nos tirar do lugar.",
@@ -28,25 +47,25 @@ export default {
     finish: true,
     alternatives: {
       "A": {
-        image: Image,
+        image: A_image_music,
         skills: [ s.DANCE_MUSIC ],
         otherwise: "B"
       },
 
       "B": {
-        image: Image,
+        image: A_image_sports,
         skills: [ s.SPORTS ],
         otherwise: "C"
       },
 
       "C": {
-        image: Image,
+        image: A_image_art,
         skills: [ s.ART ],
         otherwise: "A"
       },
 
       "D": {
-        image: Image,
+        image: A_image_handicraft,
         skills: [ s.ART ],
         otherwise: "B"
       }
@@ -58,25 +77,25 @@ export default {
     finish: true,
     alternatives: {
       "A": {
-        image: Image,
+        image: B_image_communication,
         skills: [ s.COMMUNICATION ],
         otherwise: "B"
       },
 
       "B": {
-        image: Image,
+        image: B_image_education,
         skills: [ s.EDUCATION ],
         otherwise: "A"
       },
 
       "C": {
-        image: Image,
+        image: B_image_eletronics,
         skills: [ s.IT ],
         otherwise: "D"
       },
 
       "D": {
-        image: Image,
+        image: B_image_languages,
         skills: [ s.LANGUAGES ],
         otherwise: "A"
       }
@@ -89,24 +108,24 @@ export default {
     finish: true,
     alternatives: {
       "A": {
-        image: Image,
+        image: C_image_law,
         skills: [ s.LAW ],
         otherwise: "B"
       },
 
       "B": {
-        image: Image,
+        image: C_image_management,
         skills: [ s.MANAGEMENT ],
         otherwise: "D"
       },
 
       "C": {
-        image: Image,
+        image: C_image_gastronomy,
         skills: [ s.GASTRONOMY ]
       },
 
       "D": {
-        image: Image,
+        image: C_image_management2,
         skills: [ s.GASTRONOMY ],
         otherwise: "B"
       }
@@ -118,25 +137,25 @@ export default {
     finish: true,
     alternatives: {
       "A": {
-        image: Image,
+        image: D_image_someone_happy,
         skills: [ s.HEALTH ],
         otherwise: "B"
       },
 
       "B": {
-        image: Image,
+        image: D_image_talk_in_comunity,
         skills: [ s.PSYCHOLOGY ],
         otherwise: "A"
       },
 
       "C": {
-        image: Image,
+        image: D_image_kid_in_hospital,
         skills: [ s.HEALTH ],
         otherwise: "D"
       },
 
       "D": {
-        image: Image,
+        image: D_image_rh,
         skills: [ s.PSYCHOLOGY ],
         otherwise: "C"
       }

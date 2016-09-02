@@ -29,7 +29,7 @@ const QuizResult = ({ causes, skills, onShowVacanciesClick }) => {
     <div className="quiz-result">
       <div className="container">
         <div className="quiz-question-info">
-          <h1 className="quiz-title">Quizz do volutário</h1>
+          <h1 className="quiz-title">Quiz do volutário</h1>
         </div>
         <div className="quiz-box">
           <div className="quiz-box-content">
