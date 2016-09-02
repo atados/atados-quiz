@@ -23,11 +23,19 @@ const quiz = (state = initialState, action) => {
   switch (action.type) {
     case QUIZ_RESET:
       return {
-        ...initialState,
-        answers: {
-          causes: {},
-          skills: {}
-        }
+          currentStep: STEP_PRESENTATION,
+          questions: questions,
+          currentQuestion: firstQuestion,
+          answers: {
+            causes: {},
+            skills: {}
+          },
+          results: {
+            causes: [],
+            skills: []
+          },
+          causes: causes,
+          skills: skills
       }
     case SET_STEP:
       return {

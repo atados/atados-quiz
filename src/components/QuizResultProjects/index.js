@@ -19,7 +19,7 @@ class QuizResultProjects extends React.Component {
     const { projects, isFetching } = this.props;
 
     if (isFetching) {
-      return <img src={loadingSpin} alt="Loading" />
+      return <img src={loadingSpin} className="preloader" alt="Loading" />
     }
 
     if (!projects || !projects.length) {
@@ -37,16 +37,9 @@ class QuizResultProjects extends React.Component {
   render() {
     return (
       <div className="quiz-projects">
-        <div className="container">
-          <div className="quiz-question-info">
-            <h1 className="quiz-title">Essas são as vagas disponíveis</h1>
-          </div>
-          <div className="quiz-box">
-            <div className="quiz-box-content">
-              { this.content }
-            </div>
-          </div>
-        </div>
+        <h1 className="quiz-title">Essas são as vagas disponíveis</h1>
+
+        { this.content }
       </div>
     );
   }

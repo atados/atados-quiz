@@ -1,70 +1,82 @@
-import Image from '../components/QuizAlternative/image.jpg'
+import image_professional_capacitation from '../assets/img/2A/capacitacaoprofissa.jpg'
+import image_fighting_poverty from '../assets/img/2A/combateapobreza2.jpg'
+import image_rights_defense from '../assets/img/2A/defesadedireitos.jpg'
+import image_civic_participation from '../assets/img/2A/participacaocidada.jpg'
+import image_young_people from '../assets/img/2B/criancasejovens3.jpg'
+import image_culture from '../assets/img/2B/culturaesporteartes.jpg'
+import image_education from '../assets/img/2B/educacao.jpg'
+import image_elderly from '../assets/img/2C/idosos.jpg'
+import image_disabled_people from '../assets/img/2C/pessoascomdeficiencia1.jpg'
+import image_health from '../assets/img/2C/saude.jpg'
+import image_conscious_consumption from '../assets/img/2D/consumoconsciente.jpg'
+import image_environment from '../assets/img/2D/meioambiente.jpg'
+import image_animal_protection from '../assets/img/2D/protecaoanimal.jpg'
 
 export const causes =  [
   {
     id: "1",
     name: "Capacitação Profissional",
-    image: Image
+    image: image_professional_capacitation
   },
   {
     id: "2",
     name: "Combate à Pobreza",
-    image: Image
+    image: image_fighting_poverty
   },
   {
     id: "3",
     name: "Consumo Consciente",
-    image: Image
+    image: image_conscious_consumption
   },
   {
     id: "4",
     name: "Crianças e Jovens",
-    image: Image
+    image: image_young_people
   },
   {
     id: "5",
     name: "Cultura, Esporte e Arte",
-    image: Image
+    image: image_culture
   },
   {
     id: "6",
     name: "Defesa de Direitos",
-    image: Image
+    image: image_rights_defense
   },
   {
     id: "7",
     name: "Educação",
-    image: Image
+    image: image_education
   },
   {
     id: "8",
     name: "Idosos",
-    image: Image
+    image: image_elderly
   },
   {
     id: "9",
     name: "Meio Ambiente",
-    image: Image
+    image: image_environment
   },
   {
     id: "10",
     name: "Participação Cidadã",
-    image: Image
+    image: image_civic_participation
   },
   {
     id: "11",
     name: "Proteção Animal",
-    image: Image
+    image: image_animal_protection
   },
   {
     id: "12",
     name: "Saúde",
-    image: Image
+    image: image_health
   },
   {
     id: "13",
     name: "Pessoas com Deficiência",
-    image: Image
+    image: image_disabled_people
   }
 ]
 

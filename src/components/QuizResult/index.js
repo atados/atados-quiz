@@ -1,5 +1,6 @@
 import React from 'react'
 import QuizResultItem from '../QuizResultItem'
+import QuizResultProjects from '../QuizResultProjects'
 
 function renderItems(items) {
   if (!items) return [];
@@ -24,12 +25,12 @@ function renderItems(items) {
   return rendered;
 }
 
-const QuizResult = ({ causes, skills, onShowVacanciesClick }) => {
+const QuizResult = ({ causes, skills }) => {
   return (
     <div className="quiz-result">
       <div className="container">
         <div className="quiz-question-info">
-          <h1 className="quiz-title">Quiz do volutário</h1>
+          <h1 className="quiz-title">Quiz do voluntário</h1>
         </div>
         <div className="quiz-box">
           <div className="quiz-box-content">
@@ -37,7 +38,7 @@ const QuizResult = ({ causes, skills, onShowVacanciesClick }) => {
             { renderItems(causes) }
             <h2 className="quiz-result-section-title">Suas <span className="quiz-highlight">habilidades</span> são:</h2>
             { renderItems(skills) }
-            <button onClick={ onShowVacanciesClick } className="btn quiz-button">Vagas disponíveis</button>
+            <QuizResultProjects />
           </div>
         </div>
       </div>

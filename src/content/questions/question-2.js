@@ -47,25 +47,25 @@ export default {
     next: "text_3",
     alternatives: {
       "A": {
-        image: A_image_professional_capacitation,
+        image: A_image_fighting_poverty,
         causes: [ c.FIGHTING_POVERTY ],
         otherwise: "B"
       },
 
       "B": {
-        image: A_image_fighting_poverty,
+        image: A_image_rights_defense,
         causes: [ c.RIGHTS_DEFENSE ],
         otherwise: "A"
       },
 
       "C": {
-        image: A_image_rights_defense,
+        image: A_image_civic_participation,
         causes: [ c.CIVIC_PARTICIPATION ],
         otherwise: "B"
       },
 
       "D": {
-        image: A_image_civic_participation,
+        image: A_image_professional_capacitation,
         causes: [ c.PROFESSIONAL_CAPACITATION ],
         otherwise: "C"
       }
@@ -77,7 +77,7 @@ export default {
     next: "text_3",
     alternatives: {
       "A": {
-        image: B_image_young_people,
+        image: B_image_culture,
         causes: [ c.CULTURE ],
         otherwise: "C"
       },
@@ -89,13 +89,13 @@ export default {
       },
 
       "C": {
-        image: B_image_culture,
+        image: B_image_education,
         causes: [ c.EDUCATION ],
         otherwise: "B",
       },
 
       "D": {
-        image: B_image_education,
+        image: B_image_young_people,
         causes: [ c.YOUNG_PEOPLE ],
         otherwise: "A",
       }
@@ -114,19 +114,19 @@ export default {
       },
 
       "B": {
-        image: C_image_disabled_people,
+        image: C_image_health,
         causes: [ c.HEALTH ],
         otherwise: "D",
       },
 
       "C": {
-        image: C_image_disabled_people2,
+        image: C_image_disabled_people,
         causes: [ c.DISABLED_PEOPLE ],
         otherwise: "A"
       },
 
       "D": {
-        image: C_image_health,
+        image: C_image_disabled_people2,
         causes: [ c.DISABLED_PEOPLE ],
         otherwise: "B",
       }
@@ -138,19 +138,19 @@ export default {
     next: "text_3",
     alternatives: {
       "A": {
-        image: D_image_conscious_consumption,
+        image: D_image_environment,
         causes: [ c.ENVIRONMENT ],
         otherwise: "B",
       },
 
       "B": {
-        image: D_image_environment,
+        image: D_image_animal_protection,
         causes: [ c.ANIMAL_PROTECTION ],
         otherwise: "A",
       },
 
       "C": {
-        image: D_image_animal_protection,
+        image: D_image_conscious_consumption,
         causes: [ c.CONSCIOUS_CONSUMPTION ],
         otherwise: "A",
       },

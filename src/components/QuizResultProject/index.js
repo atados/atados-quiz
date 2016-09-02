@@ -1,8 +1,8 @@
 import React from 'react';
 
-const QuizResultProject = ({ name, nonprofit_name, volunteers_numbers, nonprofit_image, city_state, image, small_image_url }) => {
+const QuizResultProject = ({ name, nonprofit_name, slug, volunteers_numbers, nonprofit_image, city_state, image, small_image_url }) => {
   return (
-    <a href="" className="quiz-project">
+    <a href={"//atados.com.br/vaga/" + slug } className="quiz-project">
       <div className="quiz-project-cover quiz-image" style={{ backgroundImage: `url(${small_image_url})` }}>
         <h4 className="quiz-project-vacancy">{ name }</h4>
       </div>
