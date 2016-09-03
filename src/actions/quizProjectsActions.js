@@ -18,11 +18,13 @@ function receivePosts(projects) {
   }
 }
 
-function fetchProjectsByCauseAndSkill(cause, skill) {
+function fetchProjectsByCauseAndSkill(causes, skills) {
   return dispatch => {
     dispatch(requestProjects())
+    const _skills = skills.join(',')
+    const _causes = causes.join(',')
     return reqwest({
-      url: `https://api.atados.com.br/v1/projects/?cause=${cause}&skill=${skill}`,
+      url: `https://api.atados.com.br/v1/projects/?causes=${_causes}&skills=${_skills}&region=0`,
       type: 'json'
     })
     .then(resp => {

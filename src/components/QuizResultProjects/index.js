@@ -9,7 +9,7 @@ class QuizResultProjects extends React.Component {
 
   componentDidMount() {
     const { dispatch, causes, skills } = this.props
-    dispatch(fetchProjectsIfNeeded(causes[0], skills[0]))
+    dispatch(fetchProjectsIfNeeded(causes, skills))
   }
 
   componentWillReceiveProps(nextProps) {
