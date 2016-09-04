@@ -1,6 +1,5 @@
 import React from 'react'
 import QuizAlternative from '../QuizAlternative'
-import { containAll } from '../../utils'
 
 function renderAlternatives(alternatives, onAlternativeClick, results) {
   const arr = []
