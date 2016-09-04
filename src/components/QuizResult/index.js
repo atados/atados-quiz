@@ -25,6 +25,24 @@ function renderItems(items) {
   return rendered;
 }
 
+function renderPlural(string, array) {
+  if (array.length === 1) {
+    return string
+  }
+  return string+"s";
+}
+
+function renderLinkingVerb(array) {
+  if (array.length === 1) {
+    return "é"
+  }
+  return "são"
+}
+
+function renderTitle(string, array) {
+  return <span>{ renderPlural('Sua', array) } <span className="quiz-highlight">{ renderPlural(string, array) }</span> { renderLinkingVerb(array) }:</span>
+}
+
 const QuizResult = ({ causes, skills }) => {
   return (
     <div className="quiz-result">
@@ -34,9 +52,9 @@ const QuizResult = ({ causes, skills }) => {
         </div>
         <div className="quiz-box">
           <div className="quiz-box-content">
-            <h2 className="quiz-result-section-title">Suas <span className="quiz-highlight">causas</span> são:</h2>
+            <h2 className="quiz-result-section-title">{ renderTitle('causa', causes) }</h2>
             { renderItems(causes) }
-            <h2 className="quiz-result-section-title">Suas <span className="quiz-highlight">habilidades</span> são:</h2>
+            <h2 className="quiz-result-section-title">{ renderTitle('habilidade', skills) }</h2>
             { renderItems(skills) }
             <QuizResultProjects />
           </div>
