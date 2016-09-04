@@ -11,14 +11,6 @@ function renderAlternatives(alternatives, onAlternativeClick, results) {
       let alternative = alternatives[label]
       let _label = label
 
-      if (
-        (alternative.causes && results.causes.length && containAll(results.causes, alternative.causes)) ||
-        (alternative.skills && results.skills.length && containAll(results.skills, alternative.skills)) ) {
-        _label = alternative.otherwise
-        alternative = alternatives[_label]
-        console.log(label)
-      }
-
       arr.push(
         <div className="col-md-6">
           <QuizAlternative
