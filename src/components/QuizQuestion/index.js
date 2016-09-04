@@ -50,9 +50,9 @@ const QuizQuestion = ({ title, alternatives, onAlternativeClick, results }) => {
           <h1 className="quiz-title">Quiz Voluntário</h1>
         </div>
         <div className="quiz-box">
-          <div className="quiz-home-button">
+          <a className="quiz-home-button" href="/">
             <i className="fa fa-home"></i>
-          </div>
+          </a>
           <div className="quiz-box-content">
             <h2 className="quiz-question-title">{ title }</h2>
             { renderAlternatives(alternatives, onAlternativeClick, results) }
