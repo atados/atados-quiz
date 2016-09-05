@@ -24,7 +24,7 @@ function fetchProjectsByCauseAndSkill(causes, skills) {
     const _skills = skills.join(',')
     const _causes = causes.join(',')
     return reqwest({
-      url: `https://api.atados.com.br/v1/projects/?causes=${_causes}&skills=${_skills}&region=0`,
+      url: `https://api.atados.com.br/v1/projects/?causes=${_causes}&skills=${_skills}&address=%7B%22address_components%22:%5B%7B%22long_name%22:%22S%C3%A3o+Paulo%22,%22types%22:%5B%22administrative_area_level_1%22,%22political%22%5D%7D%5D%7D`,
       type: 'json'
     })
     .then(resp => {
