@@ -60,10 +60,13 @@ class Quiz extends React.Component {
   }
 
   render() {
-    const { reset } = this.props
+    const { reset, step } = this.props
     return (
       <div className="quiz">
-        <QuizToolbar onLogoClick={reset} />
+        <QuizToolbar
+          showLogo={step !== STEP_PRESENTATION}
+          onLogoClick={reset}
+        />
         { this.content }
       </div>
     );

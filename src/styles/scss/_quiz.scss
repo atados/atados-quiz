@@ -149,12 +149,18 @@ body {
     font-size: 28px;
     text-align: center;
     padding: 8px;
+
+    &.quiz-home-button-top {
+      left: auto;
+      bottom: auto;
+      top: -25px;
+      right: -25px;
+    }
   }
 
   .quiz-question-info {
     text-align: center;
     padding: 36px 0;
-    min-height: 176px;
     margin: 0 auto;
 
     .quiz-subtitle {

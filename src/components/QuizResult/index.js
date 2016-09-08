@@ -51,6 +51,12 @@ const QuizResult = ({ causes, skills }) => {
           <h1 className="quiz-title">Quiz do voluntário</h1>
         </div>
         <div className="quiz-box">
+          <a className="quiz-home-button" href="/">
+            <i className="fa fa-home"></i>
+          </a>
+          <a className="quiz-home-button quiz-home-button-top" href="/">
+            <i className="fa fa-home"></i>
+          </a>
           <div className="quiz-box-content">
             <h2 className="quiz-result-section-title">{ renderTitle('causa', causes) }</h2>
             { renderItems(causes) }
