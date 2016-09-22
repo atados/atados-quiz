@@ -37,9 +37,6 @@ const QuizQuestion = ({ title, alternatives, onAlternativeClick, results }) => {
   return (
     <div className="quiz-question">
       <div className="container">
-        <div className="quiz-question-info">
-          <h1 className="quiz-title">Quiz do Voluntário</h1>
-        </div>
         <div className="quiz-box">
           <a className="quiz-home-button" href="/">
             <i className="fa fa-home"></i>

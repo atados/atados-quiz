@@ -7,6 +7,8 @@ import QuizResult from '../components/QuizResult'
 import QuizResultProjects from '../components/QuizResultProjects'
 import { STEP_PRESENTATION, STEP_PROJECTS, STEP_RESULT, STEP_QUESTION, setStep, setCurrentQuestion, resetQuiz, answerQuestion, setResults } from '../actions/quizActions';
 import { findBiggestValuesInObject } from '../utils'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+
 
 class Quiz extends React.Component {
   constructor(props) {
@@ -43,13 +45,42 @@ class Quiz extends React.Component {
 
       case STEP_QUESTION:
         const question = this.props.question
-        return <QuizQuestion
-          {...question}
-          results={results}
-          onAlternativeClick={ (label) => this.handleQuestionAnswer(question, label) } />
+        return (
+          <ReactCSSTransitionGroup
+            component="div"
+            transitionName="quiz-animation"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={500}
+          >
+            <div className="container">
+              <div className="quiz-question-info">
+                <h1 className="quiz-title">Quiz do Voluntário</h1>
+              </div>
+            </div>
+            <QuizQuestion
+              key={question.id}
+              {...question}
+              results={results}
+              onAlternativeClick={ (label) => this.handleQuestionAnswer(question, label) } />
+          </ReactCSSTransitionGroup>
+        )
 
       case STEP_RESULT:
-        return <QuizResult {...results} onShowVacanciesClick={() => setStep(STEP_PROJECTS)} />
+        return (
+          <ReactCSSTransitionGroup
+            component="div"
+            transitionName="quiz-animation"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={500}
+          >
+            <div className="container">
+              <div className="quiz-question-info">
+                <h1 className="quiz-title">Quiz do Voluntário</h1>
+              </div>
+            </div>
+            <QuizResult key="result" {...results} onShowVacanciesClick={() => setStep(STEP_PROJECTS)} />
+          </ReactCSSTransitionGroup>
+        )
 
       case STEP_PROJECTS:
         return <QuizResultProjects />
